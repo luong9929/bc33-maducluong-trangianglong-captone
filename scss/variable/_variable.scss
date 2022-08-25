@@ -1,0 +1,37 @@
+//bg
+$bg-c1-dark :#000 ;
+$bg-c1-light:#F5F5F5;
+//color
+$text-c1-dark:#000;
+$text-c1-light:#FFFFFF;
+
+//font style
+$text-size-base :16px;
+$text-size-l :20px;
+$text-size-xl :30px;
+//font-weight
+$text-light: 300;
+$text-regular: 400;
+$text-semibold: 600;
+$text-bold: 700;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@mixin text ($fs:$text-size-base,$fw:$text-regular,$c:$text-c1-light,$lh:0) {
+    font-size: $fs;
+    font-weight: $fw;
+    color: $c;
+    line-height: $lh;
+}
