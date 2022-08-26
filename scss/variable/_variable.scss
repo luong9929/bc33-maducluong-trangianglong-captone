@@ -1,9 +1,15 @@
 //bg
 $bg-c1-dark :#000 ;
+$bg-c2-dark :#D9D9D9 ;
 $bg-c1-light:#F5F5F5;
+$bg-c1-puple:#AE18E2;
+
 //color
 $text-c1-dark:#000;
 $text-c1-light:#FFFFFF;
+$text-c2-light:#FFFCFC;
+$text-c1-danger:#F50E0E;
+$text-c1-puple:#AE18E2;
 
 //font style
 $text-size-base :16px;
@@ -33,5 +39,14 @@ $text-bold: 700;
     font-size: $fs;
     font-weight: $fw;
     color: $c;
+    line-height: $lh;
+}
+@mixin button ($w,$h,$bg,$c,$fs,$fw,$lh){
+    width:$w;
+    height:$h ;
+    background-color:$bg ;
+    color: $c;
+    font-size:$fs ;
+    font-weight: $fw;
     line-height: $lh;
 }
