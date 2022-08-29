@@ -1,2 +1,133 @@
 @import '../../variable/variable';
 @import '../../base/base';
+
+.Mycarousel{
+    .carousel{
+        .carousel-indicators{
+            button{
+                width: 12px;
+                height: 12px;
+                border-radius: 50%;
+            }
+        }
+    }
+    .carousel-inner{
+       
+        .carousel-item{
+            height: 530px ;
+                width: 1280px;
+                position: relative;
+                
+            img{
+                
+                height: 100%;
+                object-fit: cover;
+                
+                
+            }
+            .thumnail{
+                position: absolute;
+                top: 5px;
+                left: 120px;
+
+            }
+            .title{
+                position: absolute;
+                top: 175px;
+                left: 1000px;
+                
+                h3{
+                    @include text ($text-size-2xl,$text-light,$text-c1-dark,48px);
+                }
+                p{
+                    @include text ($text-size-l,$text-light,$text-c1-dark,24px);
+                }
+                button{
+                    @include button(150px,50px,$bg-c1-warning,$text-c1-light,$text-size-l,$text-light,24px);
+                    border: none;
+                    &:hover{
+                        opacity: 0.9;
+                        border: $text-c1-warning 1px solid;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.main{
+    .container{
+        .row{
+            padding: 50px 0;
+            width: 85%;
+            margin: auto;
+            gap: 40px;
+            .col-4{
+                width: 334px;
+                height: 400px;
+                background-color:$bg-c2-light ;
+                position: relative;
+                .item{
+                   
+                    padding:  0 12px;
+                    .thumnail{
+                        text-align: center;
+                        margin-top: 45px;
+                        img{
+                            width: 220px;
+                            height: 156px;
+                            object-fit: cover;
+                           margin: 0
+                        }
+                    }
+                   
+                    .text{
+                        h3{
+                            margin: 15px 0;
+                            @include text ($text-size-l,$text-semibold,$text-c1-dark,29px);
+                            
+                        }
+                        p{
+                            @include text ($text-size-base,$text-light,$text-c3-light,24.2px);
+                        }
+                    }
+                    .title{
+                        position: absolute;
+                        top: 335px;
+                        left: 0;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 100%;
+                        overflow: hidden;
+                        button{
+                            // width: 175px;
+                            // height: 64px;
+                            // border: none;
+                            // background-color:$bg-c1-warning ;
+                            @include button (175px,64px,$bg-c1-warning,$text-c1-dark,$text-size-l,$text-light,29px);
+                            border: none;
+                            a{
+                                text-decoration: none;
+                                @include text ($text-size-l,$text-light,$text-c1-dark,29px);
+                            }
+                            &:hover{
+                                opacity: 0.9;
+                                border: $text-c1-warning 1px solid;
+                            }
+                        }
+                        p{
+                            margin: 0;
+                            padding: 18px 0;
+                            background-color:$bg-c2-warning ;
+                           text-align: center;
+                            width: 175px;
+                            height: 64px;
+                            @include text ($text-size-l,$text-semibold,$text-c1-dark,24.2px);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
