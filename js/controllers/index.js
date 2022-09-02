@@ -24,7 +24,7 @@ window.onload = function () {
     for (let i = 0 ; i < arrContent.length ; i++){
         let data = arrContent[i]
         html += `
-        <div class="col-4">
+        <div class="  col-4 col-mg-4 col-lg-6">
         <div class="item">
         <div class="thumnail">
         <img src="${data.image}" alt="img"></div>

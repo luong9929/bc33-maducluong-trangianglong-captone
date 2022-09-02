@@ -6,6 +6,8 @@
     padding: 30px 0;
 
     .container {
+       
+
         h1 {
             text-align: center;
             margin-bottom: 70px;
@@ -14,11 +16,45 @@
         .form {
             width: 80%;
             margin: auto;
+            @media screen and (max-width:1280px) {
+
+                width: 100%;
+                margin: 0;
+
+            }
+            @media screen and (max-width:992px) {
+
+                width: 60%;
+                margin: auto;
+
+            }
+            @media screen and (max-width:776px) {
+
+                width: 80%;
+                margin: auto;
+
+            }
+            @media screen and (max-width:576px) {
+
+                width: 100%;
+                margin: 0;
+
+            }
 
             .row {
                 flex-wrap: nowrap;
 
                 gap: 20px;
+                @media screen and (max-width:1280px) {
+                    gap: 0;
+                    
+    
+                }
+                @media screen and (max-width:992px) {
+                    display: block;
+                    width: 100%;
+                    padding: 0 30px;
+                }
 
                 .left {
 
@@ -29,7 +65,7 @@
                             height: 51px;
                             position: relative;
                             margin-bottom: 15px;
-
+                            
                             &::after {
                                 content: '';
                                 background: linear-gradient(180deg, #AE18E2 0%, rgba(0, 0, 0, 0) 100%);
@@ -49,7 +85,7 @@
                                 border: none;
                                 width: 346px;
                                 height: 36px;
-
+                                 
                                 &:focus {
                                     outline: none;
                                 }
@@ -134,14 +170,15 @@
 
                             gap: 60px;
 
-
                             h3 {
                                 @include text ($text-size-xl, $text-regular, $text-c1-dark, 36px);
                                 padding-top: 10px;
                             }
 
                             .check {
-                               
+                                
+                                display: flex;
+
                                 .male {
                                     display: inline-block;
                                     position: relative;
@@ -154,7 +191,7 @@
                                         position: absolute;
                                         opacity: 0;
                                         cursor: pointer;
-                                        
+
 
                                     }
 
@@ -177,18 +214,20 @@
                                             height: 30px;
                                             border-radius: 50%;
                                             background: $bg-c1-puple;
-                                            
-                                           
+
+
                                         }
-                                        
+
 
 
 
                                     }
                                 }
-                                .male input:checked ~ .checkmark::after{
+
+                                .male input:checked~.checkmark::after {
                                     display: block;
                                 }
+
                                 .female {
                                     margin-left: 50px;
                                     @extend .male
@@ -202,9 +241,10 @@
                             margin-top: 100px;
                             margin-bottom: 30px;
                             border: none;
-                            @include button (291px, 50px,$bg-c1-puple, $text-c2-light, $text-size-xl, $text-regular, 36px);
-                            &:hover{
-                                border:$text-c1-puple 1px  solid ;
+                            @include button (291px, 50px, $bg-c1-puple, $text-c2-light, $text-size-xl, $text-regular, 36px);
+
+                            &:hover {
+                                border: $text-c1-puple 1px solid;
                             }
                         }
                     }
@@ -213,4 +253,3 @@
         }
     }
 }
-

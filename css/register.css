@@ -18,6 +18,11 @@
   justify-content: space-between;
   align-items: center;
 }
+@media screen and (max-width: 576px) {
+  .header .container {
+    padding: 0 5px;
+  }
+}
 .header .container .logo img {
   width: 116px;
   height: 32px;
@@ -53,6 +58,11 @@
 .navbar .container {
   padding: 16px 0;
 }
+@media screen and (max-width: 576px) {
+  .navbar .container {
+    padding: 0 10px;
+  }
+}
 .navbar .container .title .active {
   opacity: 1;
 }
@@ -82,13 +92,36 @@
   opacity: 1;
 }
 
+@media screen and (max-width: 576px) {
+  .footer .container-fluid {
+    padding: 0;
+    width: 100% !important;
+  }
+}
 .footer .container-fluid .top {
   padding: 30px;
   background-color: ghostwhite;
 }
+@media screen and (max-width: 576px) {
+  .footer .container-fluid .top {
+    padding: 10px 30px;
+  }
+}
 .footer .container-fluid .top .row {
   width: 85%;
   margin: auto;
+}
+@media screen and (max-width: 576px) {
+  .footer .container-fluid .top .row {
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+  }
+}
+@media screen and (max-width: 576px) {
+  .footer .container-fluid .top .row .col .item {
+    margin-bottom: 10px;
+  }
 }
 .footer .container-fluid .top .row .col .item h3 {
   font-size: 30px;
@@ -121,6 +154,12 @@
   padding-left: 20px;
   height: 100%;
 }
+@media screen and (max-width: 576px) {
+  .footer .container-fluid .top .row .col .item-2 {
+    border: none;
+    padding: 0;
+  }
+}
 .footer .container-fluid .top .row .col .item-3 a {
   text-decoration: none;
   color: #ff6200;
@@ -132,9 +171,26 @@
   padding: 30px 0 50px;
   background-color: rgba(214, 211, 211, 0.545);
 }
+@media screen and (max-width: 576px) {
+  .footer .container-fluid .bot {
+    padding: 10px 30px;
+  }
+}
 .footer .container-fluid .bot .row {
   width: 85%;
   margin: auto;
+}
+@media screen and (max-width: 576px) {
+  .footer .container-fluid .bot .row {
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+  }
+}
+@media screen and (max-width: 576px) {
+  .footer .container-fluid .bot .row .col {
+    margin-bottom: 20px;
+  }
 }
 .footer .container-fluid .bot .row .col .item h3 {
   font-size: 30px;
@@ -142,6 +198,22 @@
   color: #000;
   line-height: 24px;
   margin-bottom: 20px;
+}
+@media screen and (max-width: 992px) {
+  .footer .container-fluid .bot .row .col .item h3 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #000;
+    line-height: 32px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .footer .container-fluid .bot .row .col .item h3 {
+    font-size: 30px;
+    font-weight: 600;
+    color: #000;
+    line-height: 24px;
+  }
 }
 .footer .container-fluid .bot .row .col .item p {
   font-size: 14px;
@@ -159,6 +231,13 @@
   border-left: rgba(0, 0, 0, 0.1647058824) 1px solid;
   padding-left: 20px;
 }
+@media screen and (max-width: 576px) {
+  .footer .container-fluid .bot .row .col .item-2 {
+    border: 0;
+    padding: 0;
+    margin: 0;
+  }
+}
 
 .main {
   padding: 30px 0;
@@ -171,9 +250,45 @@
   width: 80%;
   margin: auto;
 }
+@media screen and (max-width: 1280px) {
+  .main .container .form {
+    width: 100%;
+    margin: 0;
+  }
+}
+@media screen and (max-width: 992px) {
+  .main .container .form {
+    width: 60%;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 776px) {
+  .main .container .form {
+    width: 80%;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 576px) {
+  .main .container .form {
+    width: 100%;
+    margin: 0;
+  }
+}
 .main .container .form .row {
   flex-wrap: nowrap;
   gap: 20px;
+}
+@media screen and (max-width: 1280px) {
+  .main .container .form .row {
+    gap: 0;
+  }
+}
+@media screen and (max-width: 992px) {
+  .main .container .form .row {
+    display: block;
+    width: 100%;
+    padding: 0 30px;
+  }
 }
 .main .container .form .row .left .item .email, .main .container .form .row .left .item .passwordConfirm, .main .container .form .row .left .item .password {
   width: 482px;
@@ -275,6 +390,9 @@
   color: #000;
   line-height: 36px;
   padding-top: 10px;
+}
+.main .container .form .row .right .item .gender .check {
+  display: flex;
 }
 .main .container .form .row .right .item .gender .check .male, .main .container .form .row .right .item .gender .check .female {
   display: inline-block;

@@ -18,7 +18,11 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        @media screen and (max-width:576px) {
+            padding: 0 5px;
+            
 
+        }
         .logo {
             img {
                 width: 116px;
@@ -65,7 +69,11 @@
 .navbar {
     .container {
         padding: 16px 0;
+        @media screen and (max-width:576px) {
+            padding: 0 10px;
+            
 
+        }
         .title {
             .active {
                 opacity: 1;
@@ -104,17 +112,35 @@
 .footer{
     
     .container-fluid{
-       
+        @media screen and (max-width:576px) {
+            padding: 0;
+            width: 100% !important;
+
+        }
         .top{
             padding: 30px ;
             background-color:ghostwhite;
+            @media screen and (max-width:576px) {
+                padding: 10px 30px;
+            
+
+            }
             .row{
                 width: 85%;
                 margin: auto;
+                @media screen and (max-width:576px) {
+                    flex-direction: column;
+                    width: 100%;
+                    margin: 0;
+                }
                 .col{
                    
                     .item{
-                       
+                        @media screen and (max-width:576px) {
+
+                            margin-bottom: 10px;
+
+                        }
 
                         h3{
                             @include text($text-size-xl,$text-semibold,$text-c1-dark,24px);
@@ -141,6 +167,11 @@
                         border-left: #0000002b 1px solid;
                         padding-left: 20px;
                         height: 100%;
+                        @media screen and (max-width:576px) {
+                            border: none;
+            
+                            padding: 0;
+                        }
                     }
                     .item-3{
                         a{
@@ -158,14 +189,41 @@
         .bot{
             padding: 30px 0 50px;
             background-color:rgba(214, 211, 211, 0.545);
+            @media screen and (max-width:576px) {
+                padding: 10px 30px;
+            
+
+            }
             .row{
                 width: 85%;
                 margin: auto;
+                @media screen and (max-width:576px) {
+                   flex-direction: column;
+                   width: 100%;
+                   margin: 0;
+
+                }
                 .col{
+                    @media screen and (max-width:576px) {
+                        margin-bottom: 20px;
+                       
+
+                    }
                     .item{
+                        
                         h3{
                             @include text($text-size-xl,$text-semibold,$text-c1-dark,24px);
                             margin-bottom: 20px;
+                            @media screen and (max-width:992px) {
+                                @include text($text-size2-l,$text-semibold,$text-c1-dark,32px);
+                               
+
+                            }
+                            @media screen and (max-width:576px) {
+                                @include text($text-size-xl,$text-semibold,$text-c1-dark,24px);
+                               
+
+                            }
                         }
                         p{
                             font-size: 14px;
@@ -183,6 +241,12 @@
                         border-right:#0000002a 1px solid ;
                         border-left: #0000002a 1px solid;
                         padding-left: 20px;
+                        @media screen and (max-width:576px) {
+                            border: 0;
+                            padding: 0;
+                           margin: 0;
+
+                        }
                     }
                 }
             }

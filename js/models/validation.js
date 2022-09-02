@@ -2,7 +2,7 @@ function kiemtrarong (value,selectorError,name){
     // var valid = true
 
     if(value === ''){
-        document.querySelector(selectorError).innerHTML = name + 'không được bỏ trống'
+        document.querySelector(selectorError).innerHTML = name + ' không được bỏ trống'
         return false
     }
         document.querySelector(selectorError).innerHTML = ''
@@ -16,7 +16,7 @@ function kiemtraso(value,selectorError,name){
         document.querySelector(selectorError).innerHTML = ''
         return true
     }
-    document.querySelector(selectorError).innerHTML = name + 'tất cả phải là số'
+    document.querySelector(selectorError).innerHTML = name  + '  tất cả phải là số'
     return false
 }
 function kiemtrakytu(value,selectorError,name){
@@ -25,7 +25,7 @@ function kiemtrakytu(value,selectorError,name){
         document.querySelector(selectorError).innerHTML = ''
         return true
     }
-    document.querySelector(selectorError).innerHTML = name + 'tất cả phải là ký tự'
+    document.querySelector(selectorError).innerHTML = name + ' tất cả phải là ký tự'
     return false
 }
 function kiemtraemail(value,selectorError,name){
@@ -34,7 +34,7 @@ function kiemtraemail(value,selectorError,name){
         document.querySelector(selectorError).innerHTML = ''
         return true
     }
-    document.querySelector(selectorError).innerHTML = name + 'phải đúng định dạng ! VD : abc@domain.com '
+    document.querySelector(selectorError).innerHTML = name + ' phải đúng định dạng ! VD : abc@domain.com '
     return false
 }
 function kiemtramatkhau (value,selectorError,name){
@@ -47,13 +47,19 @@ function kiemtramatkhau (value,selectorError,name){
     return false
 }
 
-function passwordConfirm (value1,value2,selectorError){
-    console.log(value2 === value1);
-    let regex = value2
-    if(value1===value2){
+
+function nhaplaimatkhau(selector1,selector2,selectorError){
+    let pass1 = document.querySelector(selector1).value;
+    let pass2 = document.querySelector(selector2).value
+    console.log(pass1 == pass2)
+    console.log(pass1)
+    console.log(pass2)
+    if(pass2 !== pass1){
+        document.querySelector(selectorError).innerHTML =  ' mật khẩu nhập lại phải  khớp với mật khẩu ban đầu'
+        return false
+    }else{
         document.querySelector(selectorError).innerHTML = ''
         return true
     }
-    document.querySelector(selectorError).innerHTML = 'mật khẩu nhập lại phải  khớp với mật khẩu ban đầu'
-    return false
+    
 }
